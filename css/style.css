@@ -1,0 +1,34 @@
+* {
+    margin: 0%;
+}
+
+html, body {
+    height: 100%;
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 15px;
+    background-color: rgb(73, 109, 252);
+    color: white;
+}
+
+nav {
+    text-align: center;
+}
+
+.a_nav {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+footer {
+    background-color: rgb(196, 228, 255);
+    color: rgb(9, 0, 59);
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+}
