@@ -8,7 +8,11 @@ html, body {
 
 body {
     background-image: url(../Img/backgroung.jpg);
+    background-attachment: fixed;
     background-size: cover;
+}
+
+.filtre {
     backdrop-filter: blur(8px) brightness(70%);
 }
 
@@ -58,8 +62,16 @@ body {
 }
 
 .content {
+    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.flex_pres {
     display: flex;
     justify-content: center;
+    margin-bottom: 1%;
 }
 
 .presentation {
@@ -72,7 +84,7 @@ body {
     transition: 2s;
     text-align: center;
     color: rgba(255, 255, 255, 0.791);
-    margin-top: 1%;
+    height: fit-content;
 }
 
 .name {
@@ -92,4 +104,61 @@ body {
 
 .presentation:hover {
     transform: scale(1.06);
+}
+
+footer {
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.50);
+    padding-top: 4%;
+}
+
+.contact {
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 200%;
+    text-decoration: underline overline;
+    text-underline-offset: 10px;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+footer a img {
+    width: 80px;
+}
+
+.flex_cont {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 5%;
+}
+
+.mail,
+.linkedin,
+.telephone {
+    text-align: center;
+    color: white;
+    width: 20%;
+    transition: 1.5s;
+}
+
+.mail:hover,
+.linkedin:hover,
+.telephone:hover {
+    transform: scale(1.2);
+}
+
+.linkedin p,
+.telephone p,
+.mail p {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.linkedin a,
+.telephone a,
+.mail a {
+    display: block;
+    text-decoration: none;
+    color: white;
 }
