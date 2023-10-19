@@ -16,6 +16,27 @@ body {
     backdrop-filter: blur(8px) brightness(70%);
 }
 
+.bouton-top {
+    bottom: 15%;
+    right: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.580);
+    position: sticky;
+    float: right;
+    border: none;
+    transition: 2s;
+    color: white;
+    text-align: center;
+    display: none;
+}
+
+.bouton-top:hover {
+    background-color: rgba(255, 255, 255, 0.507);
+    color: black;
+}
+
 .menu-inline a {
     font-size: 22px;
     color: #ffff;
@@ -78,7 +99,6 @@ body {
     border-radius: 20px;
     background-image: url(../Img/internet.jpg);
     box-shadow: 0px 0px 20px black;
-    max-width: 50%;
     width: 42%;
     padding: 5%;
     transition: 2s;
@@ -111,6 +131,7 @@ footer {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.50);
     padding-top: 4%;
+    margin-bottom: -100px;
 }
 
 .contact {
@@ -161,4 +182,27 @@ footer a img {
     display: block;
     text-decoration: none;
     color: white;
+}
+
+@media only screen and (max-width: 1000px) {
+ 
+    .flex_pres {
+        display: block;
+        justify-content: none;
+    }
+
+    .presentation {
+        width: 100%;
+        padding: 0;
+        border-radius: 0px;
+    }
+
+    .name {
+        padding-top: 5%;
+    }
+
+    .descript {
+        padding: 5%;
+        padding-top: 2%;
+    }
 }
