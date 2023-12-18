@@ -1,3 +1,5 @@
+// Contact
+
 document.querySelector('a[href="#Contact"]').addEventListener('click', function (e) {
     e.preventDefault(); // Empecher le comportement de lien normal
 
@@ -26,6 +28,37 @@ document.querySelector('.menu-incolumn a[href="#Contact"]').addEventListener('cl
     });
 });
 
+// Réalisation
+
+document.querySelector('a[href="#realisation"]').addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const target = document.querySelector('#realisation');
+    const offset = target.getBoundingClientRect().top + window.scrollY;
+    const duration = 1000;
+
+    window.scrollTo({
+        top: offset,
+        behavior: 'smooth',
+        duration : duration
+    });
+});
+
+document.querySelector('.menu-incolumn a[href="#realisation"]').addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const target = document.querySelector('#realisation');
+    const offset = target.getBoundingClientRect().top + window.scrollY;
+    const duration = 1000;
+
+    window.scrollTo({
+        top: offset,
+        behavior: 'smooth',
+        duration : duration
+    });
+});
+
+// Bouton Top
 
 document.querySelector('a[href="#Top"]').addEventListener('click', function (e) {
     e.preventDefault();
