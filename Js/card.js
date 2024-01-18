@@ -20,7 +20,7 @@ function goFront(card) {
     card.classList.remove("rotate");
 }
 
-
+/*
 const imgDivs = document.querySelectorAll('.front');
 const containerDivs = document.querySelectorAll('.container-3d');
 
@@ -41,3 +41,4 @@ imgDivs.forEach((imgDiv, index) => {
     // Copy height
     destinationDiv.style.height = getComputedStyle(imgDiv).height;
 });
+*/

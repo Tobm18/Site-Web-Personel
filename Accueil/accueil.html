@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
         <link rel="stylesheet" href="../Accueil/style_acceuil.css">
         <link rel="shortcut icon" href="../Img/favicon.png">
         <title>Tom BALLESTER</title>
@@ -43,41 +44,43 @@
                     <h1>Mes Réalisation</h1>
                     <section class="real_content">
                         <!--pop up-->
-                        <button id="btnRéseaux"><span>Réseaux</span></button>
+                        <button class="btn_domaine" id="btnRéseaux"><span>Réseaux</span></button>
                         <div id="réseaux" class="window">
                             <div class="content">
                                 <div class="container">
-                                    <span class="close">close</span>
-                                    <h1>content Réseaux</h1>
+                                    <span class="close">Fermer</span>
+                                    <p style="text-align: center; width: 100%; color: white; font-size: large; font-family: 'Courier New', Courier, monospace;">Rien ici pour le moment 👷‍♂️</p>
                                 </div>
                             </div>
                         </div>
-                        
-
-                        <button id="btnWeb"><span>Web</span></button>
+                        <button class="btn_domaine" id="btnWeb"><span>Web</span></button>
                         <div id="web" class="window">
                             <div class="content">
                                 <div class="container">
-                                    <span class="close">close</span>
-                                    <!--Carrousel-->
-                                    <main>
-                                        <div class="flex_real">
-                                            <div class="component card_ski">
-                                                <h2>Ski club Pégomas</h2>
-                                                <p>Création du site web du club U.S. Ski et Montagne - Pegomas</p>
-                                                <div class="container-3d conteneur">
-                                                    <div class="card card1">
-                                                        <div class="front">
-                                                            <img class="screen" src="../Img/website_ski.png">
-                                                        </div>  
-                                                        <div class="back">
-                                                            <div class="back-content">
+                                    <span class="close">Fermer</span>
+                                    <!--Swiper.js-->
+                                    <div class="slider-buttons">
+                                        <button class="swiper-button-prev"></button>
+                                        <button class="swiper-button-next"></button>
+                                    </div>        
+                                    <div class="swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="slider-item swiper-slide">
+                                                <div class="component card_ski">
+                                                    <h2>Ski club Pégomas</h2>
+                                                    <p>Création du site web du club U.S. Ski et Montagne - Pegomas</p>
+                                                    <div class="container-3d conteneur">
+                                                        <div class="card card1">
+                                                            <div class="front"></div>  
+                                                            <div class="back">
                                                                 <div class="back-content">
-                                                                    <div class="link-area">
-                                                                        <a class="linksite" href="https://skietmontagnepegomas.com"><img src="../Img/link.png">Visiter le site</a>
-                                                                    </div>
-                                                                    <div class="logo-dev">
-                                                                        <img src="../Img/wordpress.png">
+                                                                    <div class="back-content">
+                                                                        <div class="link-area">
+                                                                            <a class="linksite" href="https://skietmontagnepegomas.com"><img src="../Img/link.png">Visiter le site</a>
+                                                                        </div>
+                                                                        <div class="logo-dev">
+                                                                            <img src="../Img/wordpress.png">
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -85,72 +88,18 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <span class="vertical-line"></span>
-                                            <div class="component card_plongee">
-                                                <h2>La plongée</h2>
-                                                <p>Création d'un site vitrine qui présente une de mes passion.</p>
-                                                <div class="container-3d conteneur">
-                                                    <div class="card card2">
-                                                        <div class="front">
-                                                            <img class="screen" src="../Img/website_plongee.png">
-                                                        </div>
-                                                        <div class="back">
-                                                            <div class="back-content">
-                                                                <div class="link-area">
-                                                                    <a class="linksite" href="https://plongee.uca-project.com"><img src="../Img/link.png">Visiter le site</a>
-                                                                    <a class="linksite" href="https://github.com/Tobm18/Projet_site_web_plongee"><img src="../Img/git.png">Voir le code</a>
-                                                                </div>
-                                                                <div class="logo-dev">
-                                                                    <img src="../Img/html5.png">
-                                                                    <img src="../Img/css3.png">
-                                                                    <img src="../Img/js.png">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <span class="vertical-line"></span>
-                                            <div class="component card_skibourse">
-                                                <h2>Bourse aux skis</h2>
-                                                <p>Création d'une application web pour la gestion de la bourse aux skis de Pégomas</p>
-                                                <div class="container-3d conteneur">
-                                                    <div class="card card3">
-                                                        <div class="front">
-                                                            <img class="screen" src="../Img/website_ski-bourse.png">
-                                                        </div>  
-                                                        <div class="back">
-                                                            <div class="back-content">
+                                            <div class="slider-item swiper-slide">
+                                                <div class="component card_plongee">
+                                                    <h2>La plongée</h2>
+                                                    <p>Création d'un site vitrine qui présente une de mes passion.</p>
+                                                    <div class="container-3d conteneur">
+                                                        <div class="card card2">
+                                                            <div class="front"></div>
+                                                            <div class="back">
                                                                 <div class="back-content">
                                                                     <div class="link-area">
-                                                                        <a class="linksite" href="https://www.pegomas-ski.store"><img src="../Img/link.png">Visiter le site</a>
-                                                                    </div>
-                                                                    <div class="logo-dev">
-                                                                        <img src="../Img/angular.png">
-                                                                        <img src="../Img/mongodb.png">
-                                                                        <img src="../Img/node.png">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <span class="vertical-line"></span>
-                                            <div class="component card_portfolio">
-                                                <h2>Mon Portfolio</h2>
-                                                <p>Création de mon site personnel qui présente mes compétances, mes creation et mon portfolio</p>
-                                                <div class="container-3d conteneur">
-                                                    <div class="card card4">
-                                                        <div class="front">
-                                                            <img class="screen" src="../Img/website_perso.png">
-                                                        </div>  
-                                                        <div class="back">
-                                                            <div class="back-content">
-                                                                <div class="back-content">
-                                                                    <div class="link-area">
-                                                                        <a class="linksite" href="https://tballester.uca-project.com"><img src="../Img/link.png">Visiter le site</a>
-                                                                        <a class="linksite" href="https://github.com/Tobm18/Site-Web-Personel"><img src="../Img/git.png">Voir le code</a>
+                                                                        <a class="linksite" href="https://plongee.uca-project.com"><img src="../Img/link.png">Visiter le site</a>
+                                                                        <a class="linksite" href="https://github.com/Tobm18/Projet_site_web_plongee"><img src="../Img/git.png">Voir le code</a>
                                                                     </div>
                                                                     <div class="logo-dev">
                                                                         <img src="../Img/html5.png">
@@ -163,8 +112,60 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </main>
+                                            <div class="slider-item swiper-slide">
+                                                <div class="component card_skibourse">
+                                                    <h2>Bourse aux skis</h2>
+                                                    <p>Création d'une application web pour la gestion de la bourse aux skis de Pégomas</p>
+                                                    <div class="container-3d conteneur">
+                                                        <div class="card card3">
+                                                            <div class="front"></div>  
+                                                            <div class="back">
+                                                                <div class="back-content">
+                                                                    <div class="back-content">
+                                                                        <div class="link-area">
+                                                                            <a class="linksite" href="https://www.pegomas-ski.store"><img src="../Img/link.png">Visiter le site</a>
+                                                                        </div>
+                                                                        <div class="logo-dev">
+                                                                            <img src="../Img/angular.png">
+                                                                            <img src="../Img/mongodb.png">
+                                                                            <img src="../Img/node.png">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="slider-item swiper-slide">
+                                                <div class="component card_portfolio">
+                                                    <h2>Mon Portfolio</h2>
+                                                    <p>Création de mon site personnel qui présente mes compétances, mes creation et mon portfolio</p>
+                                                    <div class="container-3d conteneur">
+                                                        <div class="card card4">
+                                                            <div class="front"></div>  
+                                                            <div class="back">
+                                                                <div class="back-content">
+                                                                    <div class="back-content">
+                                                                        <div class="link-area">
+                                                                            <a class="linksite" href="https://tballester.uca-project.com"><img src="../Img/link.png">Visiter le site</a>
+                                                                            <a class="linksite" href="https://github.com/Tobm18/Site-Web-Personel"><img src="../Img/git.png">Voir le code</a>
+                                                                        </div>
+                                                                        <div class="logo-dev">
+                                                                            <img src="../Img/html5.png">
+                                                                            <img src="../Img/css3.png">
+                                                                            <img src="../Img/js.png">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>        
+                                        <div class="swiper-pagination"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -253,5 +254,7 @@
         <script src="../Js/card.js"></script>
         <script src="../Js/timeline.js"></script>
         <script src="../Js/pop-up.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+        <script src="../Js/swiper.js"></script>
     </body>
 </html>
