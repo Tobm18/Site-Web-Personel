@@ -1,39 +1,31 @@
 //Fond
-$('#fondPopUp').click(function(){
-  $('#réseaux').removeClass('open');
-  $('#web').removeClass('open');
-  $('#fondPopUp').removeClass('open');
-});
-document.querySelector('.fond_pop-up').addEventListener('mouseenter', function() {
-  document.body.classList.add('no-scroll');
-});
-document.querySelector('.fond_pop-up').addEventListener('mouseleave', function() {
-  document.body.classList.remove('no-scroll');
-});
-
-document.querySelector('.window').addEventListener('mouseenter', function() {
-  document.body.classList.add('no-scroll');
-});
-document.querySelector('.window').addEventListener('mouseleave', function() {
-  document.body.classList.remove('no-scroll');
+$("#fondPopUp").click(function () {
+  $("#réseaux").removeClass("open");
+  $("#web").removeClass("open");
+  $("#fondPopUp").removeClass("open");
+  document.body.classList.remove("no-scroll");
 });
 
 //Réseaux
-$('#btnRéseaux').click(function(){
-  $('#réseaux').addClass('open');
-  $('#fondPopUp').addClass('open');
+$("#btnRéseaux").click(function () {
+  $("#réseaux").addClass("open");
+  $("#fondPopUp").addClass("open");
+  document.body.classList.add("no-scroll");
 });
-$('#réseaux .close').click(function(){
-   $('#réseaux').removeClass('open');
-    $('#fondPopUp').removeClass('open');
+$("#réseaux .close").click(function () {
+  $("#réseaux").removeClass("open");
+  $("#fondPopUp").removeClass("open");
+  document.body.classList.remove("no-scroll");
 });
-  
+
 //Web
-$('#btnWeb').click(function(){
-  $('#web').addClass('open');
-  $('#fondPopUp').addClass('open');
+$("#btnWeb").click(function () {
+  $("#web").addClass("open");
+  $("#fondPopUp").addClass("open");
+  document.body.classList.add("no-scroll");
 });
-$('#web .close').click(function(){
-  $('#web').removeClass('open');
-  $('#fondPopUp').removeClass('open');
+$("#web .close").click(function () {
+  $("#web").removeClass("open");
+  $("#fondPopUp").removeClass("open");
+  document.body.classList.remove("no-scroll");
 });
