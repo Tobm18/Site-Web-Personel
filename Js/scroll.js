@@ -64,10 +64,15 @@ document
 
     const target = document.querySelector("#Contact");
     const offset = target.getBoundingClientRect().top + window.scrollY;
+    const vh = Math.max(
+      document.documentElement.clientHeight || 0,
+      window.innerHeight || 0
+    );
+    const offsetWithVh = offset - 0.12 * vh; // 12vh
     const duration = 1;
 
     window.scrollTo({
-      top: offset,
+      top: offsetWithVh,
       duration: duration,
       behavior: "smooth",
     });
@@ -106,12 +111,17 @@ document
 
     const target = document.querySelector("#realisation");
     const offset = target.getBoundingClientRect().top + window.scrollY;
+    const vh = Math.max(
+      document.documentElement.clientHeight || 0,
+      window.innerHeight || 0
+    );
+    const offsetWithVh = offset - 0.12 * vh; // 12vh
     const duration = 1;
 
     gsap.to(window, {
       duration: duration,
       scrollTo: {
-        y: offset,
+        y: offsetWithVh,
         autoKill: false,
       },
       ease: "power4.inOut",
@@ -131,7 +141,7 @@ document
       document.documentElement.clientHeight || 0,
       window.innerHeight || 0
     );
-    const offsetWithVh = offset - 0.09 * vh; // 10vh
+    const offsetWithVh = offset - 0.09 * vh; // 9vh
     const duration = 1;
 
     gsap.to(window, {
@@ -151,12 +161,17 @@ document
 
     const target = document.querySelector("#About");
     const offset = target.getBoundingClientRect().top + window.scrollY;
+    const vh = Math.max(
+      document.documentElement.clientHeight || 0,
+      window.innerHeight || 0
+    );
+    const offsetWithVh = offset - 0.1 * vh; // 10vh
     const duration = 1;
 
     gsap.to(window, {
       duration: duration,
       scrollTo: {
-        y: offset,
+        y: offsetWithVh,
         autoKill: false,
       },
       ease: "power4.inOut",
@@ -200,14 +215,14 @@ window.addEventListener("scroll", () => {
   if (window.scrollY === 0) {
     topMenu.style.background = "rgba(0, 0, 0, 0.25)";
   } else {
-    topMenu.style.background = "rgb(34 34 34)";
+    topMenu.style.background = "rgb(47 82 105)";
   }
 });
 
 window.addEventListener("scroll", () => {
   if (window.scrollY === 0) {
-    topMenuPhone.style.background = "rgba(0, 0, 0, 0.7)";
+    topMenuPhone.style.background = "rgba(0, 0, 0, 0.25)";
   } else {
-    topMenuPhone.style.background = "rgb(34 34 34)";
+    topMenuPhone.style.background = "rgb(47 82 105)";
   }
 });

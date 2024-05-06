@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
 
 :root {
-  --color-timeline: rgb(68 22 22);
-  --color-timeline2: rgb(123, 38, 38);
+  --color-timeline: rgb(22 31 68);
+  --color-timeline2: rgb(25 35 90);
 }
 
 * {
@@ -42,7 +42,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .filtre::before {
-  background-image: url(../Img/backgroung.jpg);
+  background-image: url(../Img/background.jpg);
   content: "";
   position: absolute;
   top: 0;
@@ -62,8 +62,8 @@ body::-webkit-scrollbar-thumb {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(../Img/backgroung.jpg);
-  filter: blur(5px) brightness(70%);
+  background-image: url(../Img/background.jpg);
+  filter: blur(1px) brightness(38%);
   background-size: cover;
   background-attachment: fixed;
   z-index: -1;
@@ -211,7 +211,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .realisation {
-  background-color: rgb(255, 236, 218);
+  background-color: rgb(218 238 255);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   min-height: 90vh;
@@ -221,7 +221,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 350%;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  background-color: rgb(255, 236, 218);
+  background-color: rgb(218 238 255);
   color: black;
   padding-top: 2%;
   height: 10vh;
@@ -348,7 +348,7 @@ back {
   width: 100%;
   height: 100%;
   border-radius: 20px;
-  background-color: #7f7f7f;
+  background-color: #adadad;
   width: 70%;
   height: 85%;
 }
@@ -440,7 +440,7 @@ back {
   flex-direction: column;
   flex-shrink: 0;
   opacity: 0;
-  background: #7f7f7f;
+  background: #adadad;
 }
 
 .slider-item-content {
@@ -703,6 +703,12 @@ back {
   --photo: url(../Img/website_ski.png);
 }
 
+.card_r2c {
+  --gradient-color1: #34a5d7;
+  --gradient-color2: #000000;
+  --photo: url(../Img/website_r2c.png);
+}
+
 .logo-dev {
   width: 100%;
   display: flex;
@@ -910,7 +916,7 @@ iframe {
   background: linear-gradient(
     139deg,
     var(--color-timeline),
-    rgb(176, 38, 38) 50%,
+    rgb(38 68 176) 50%,
     var(--color-timeline)
   );
 }
@@ -953,6 +959,17 @@ time {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 8px;
+}
+
+flex {
+  display: flex;
+  align-items: center;
+}
+
+flex img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
 }
 
 .timeline ul li::after {
@@ -1042,10 +1059,6 @@ time {
 
 .timeline-infinite ul li::after {
   animation: scaleAnimation 2s infinite;
-}
-
-.timeline ul img {
-  width: 30px;
 }
 
 /* animation timeline */
@@ -1426,12 +1439,12 @@ time {
 
 @media screen and (max-width: 767px) and (orientation: portrait) {
   .filtre::after {
-    background-image: url(../Img/backgroung-phone.jpg);
+    background-image: url(../Img/background-phone.jpg);
     background-position: fixed;
   }
 
   .filtre::before {
-    background-image: url(../Img/backgroung-phone.jpg);
+    background-image: url(../Img/background-phone.jpg);
     background-position: fixed;
   }
 
@@ -1449,7 +1462,7 @@ time {
     position: fixed;
     top: 0;
     z-index: 2;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.25);
     transition: 1.2s;
   }
 
