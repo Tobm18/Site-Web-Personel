@@ -128,6 +128,56 @@ document
     });
   });
 
+// Skills
+
+document
+  .querySelector('a[href="#Skills"]')
+  .addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const target = document.querySelector("#Skills");
+    const offset = target.getBoundingClientRect().top + window.scrollY;
+    const vh = Math.max(
+      document.documentElement.clientHeight || 0,
+      window.innerHeight || 0
+    );
+    const offsetWithVh = offset - 0.24 * vh; // 24vh
+    const duration = 1;
+
+    gsap.to(window, {
+      duration: duration,
+      scrollTo: {
+        y: offsetWithVh,
+        autoKill: false,
+      },
+      ease: "power4.inOut",
+    });
+  });
+
+document
+  .querySelector('.menu-incolumn a[href="#Skills"]')
+  .addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const target = document.querySelector("#Skills");
+    const offset = target.getBoundingClientRect().top + window.scrollY;
+    const vh = Math.max(
+      document.documentElement.clientHeight || 0,
+      window.innerHeight || 0
+    );
+    const offsetWithVh = offset - 0.12 * vh; // 12vh
+    const duration = 1;
+
+    gsap.to(window, {
+      duration: duration,
+      scrollTo: {
+        y: offsetWithVh,
+        autoKill: false,
+      },
+      ease: "power4.inOut",
+    });
+  });
+
 // Timeline
 
 document

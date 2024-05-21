@@ -675,8 +675,36 @@ back {
   transform: rotateY(-180deg);
 }
 
-.container-3d:hover {
-  transform: translateY(-15px);
+@keyframes rotatehover {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(-10deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes colorhover {
+  0% {
+    background: rgb(19 19 19 / 67%);
+  }
+  50% {
+    background: rgba(197, 197, 197, 0.829);
+  }
+  100% {
+    background: rgb(19 19 19 / 67%);
+  }
+}
+
+.container-3d:hover .card {
+  animation: rotatehover 0.6s;
+}
+
+.container-3d:hover .front img {
+  animation: colorhover 0.6s;
 }
 
 .card_plongee {
@@ -868,6 +896,128 @@ iframe {
   padding-bottom: 15px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 75%;
+}
+/*compétance*/
+.competance {
+  margin: 15vh auto;
+  width: 45em;
+  height: 70vh;
+}
+
+.competance h1 {
+  text-align: center;
+  font-family: "Nunito";
+  color: #b4f9ff;
+  font-size: 300%;
+  margin-bottom: 5vh;
+}
+
+figure {
+  float: left;
+  height: 6em;
+  margin: 1.5em;
+  width: 12em;
+  -webkit-transform: perspective(500);
+  transform: perspective(500);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+figure:hover {
+  -webkit-transform: perspective(500) rotateX(90deg) translateY(-3em)
+    translateZ(3em);
+
+  transform: perspective(500) rotateX(90deg) translateY(-3em) translateZ(3em);
+}
+
+figure div {
+  background-color: #c1dee0;
+  box-shadow: 0 20px 15px -10px hsla(0, 0%, 0%, 0.25);
+  display: block;
+  height: 100%;
+  text-align: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+figure:hover div {
+  box-shadow: none;
+}
+
+figure img {
+  display: block;
+  height: 100%;
+  padding: 5%;
+  margin: auto;
+}
+
+figcaption {
+  background-color: #222;
+  color: #fff;
+  padding: 1.5em;
+  -webkit-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+  -webkit-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+figure:hover figcaption {
+  box-shadow: 0 20px 15px -10px hsla(0, 0%, 0%, 0.25);
+}
+
+figcaption h3 {
+  font-weight: bold;
+  font-family: "Nunito";
+}
+
+.bar {
+  height: 5px;
+  margin-top: 10%;
+}
+
+.progress {
+  background-color: #0080ff;
+  height: 100%;
+}
+
+#p1 {
+  width: 90%;
+}
+
+#p2 {
+  width: 90%;
+}
+
+#p3 {
+  width: 95%;
+}
+
+#p4 {
+  width: 85%;
+}
+
+#p5 {
+  width: 45%;
+}
+
+#p6 {
+  width: 60%;
+}
+
+#p7 {
+  width: 55%;
+}
+
+#p8 {
+  width: 90%;
+}
+
+#p9 {
+  width: 35%;
 }
 
 /* timeline */
