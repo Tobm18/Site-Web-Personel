@@ -199,10 +199,6 @@ body::-webkit-scrollbar-thumb {
   max-width: 50vh;
   position: absolute;
   right: 15%;
-  border-radius: 50%;
-  border-style: solid;
-  border-width: 8px;
-  border-color: rgb(63, 63, 63);
   transition: 0.5s;
 }
 
@@ -543,8 +539,9 @@ back {
   font-family: Nunito;
   font-size: 120%;
   margin-bottom: 30px;
-  margin-top: 10%;
-  height: 50px;
+  margin-top: 5%;
+  height: 18%;
+  width: 80%;
   text-align: center;
 }
 
@@ -675,18 +672,6 @@ back {
   transform: rotateY(-180deg);
 }
 
-@keyframes rotatehover {
-  0% {
-    transform: rotateY(0deg);
-  }
-  50% {
-    transform: rotateY(-10deg);
-  }
-  100% {
-    transform: rotateY(0deg);
-  }
-}
-
 @keyframes colorhover {
   0% {
     background: rgb(19 19 19 / 67%);
@@ -697,10 +682,6 @@ back {
   100% {
     background: rgb(19 19 19 / 67%);
   }
-}
-
-.container-3d:hover .card {
-  animation: rotatehover 0.6s;
 }
 
 .container-3d:hover .front img {
@@ -714,8 +695,8 @@ back {
 }
 
 .card_portfolio {
-  --gradient-color1: #db5800;
-  --gradient-color2: #290f00;
+  --gradient-color1: #92e2ff;
+  --gradient-color2: #0e2636;
   --photo: url(../Img/website_perso.png);
 }
 
