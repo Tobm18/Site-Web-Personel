@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
 
 :root {
-  --color-timeline: rgb(22 31 68);
+  --color-timeline: rgb(21 72 112);
   --color-timeline2: rgb(25 35 90);
 }
 
@@ -1076,7 +1076,7 @@ figcaption h3 {
   background: linear-gradient(
     139deg,
     var(--color-timeline),
-    rgb(38 68 176) 50%,
+    rgb(58 166 185) 50%,
     var(--color-timeline)
   );
 }
