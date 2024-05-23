@@ -140,6 +140,35 @@ body::-webkit-scrollbar-thumb {
   transition: 1.2s;
 }
 
+.cv {
+  margin: 0 !important;
+  position: absolute !important;
+  right: 1% !important;
+  width: 9% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  font-size: small !important;
+}
+
+.cv img {
+  width: 10% !important;
+  height: 10% !important;
+  margin-right: 5px !important;
+}
+
+.cv:hover {
+  color: rgb(140, 140, 140);
+}
+
+.cv:hover::before {
+  transform: scaleX(0) !important;
+}
+
+.cv:hover img {
+  filter: invert(45%);
+}
+
 .menu-incolumn {
   display: none;
 }
