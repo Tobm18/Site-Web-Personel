@@ -1,10 +1,550 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
-    <title>Redirection</title>
-    <meta http-equiv="refresh" content="0; URL=Accueil/accueil.html" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css"
+    />
+    <link rel="stylesheet" href="./Style/style.css" />
+    <link rel="stylesheet" href="./Style/header.css" />
+    <link rel="stylesheet" href="./Style/accueil.css" />
+    <link rel="stylesheet" href="./Style/alternance.css"/>
+    <link rel="stylesheet" href="./Style/realisation.css"/>
+    <link rel="stylesheet" href="./Style/card-animation.css"/>
+    <link rel="stylesheet" href="./Style/experience.css"/>
+    <link rel="stylesheet" href="./Style/footer.css"/>
+    <link rel="shortcut icon" href="./Img/favicon.png" />
+    <title>Tom BALLESTER</title>
   </head>
   <body>
-    <p>Vous allez être redirigé vers la page d'accueil.</p>
+    <header id="Top">
+      <nav class="menu-inline">
+        <a href="#Accueil">Accueil</a>
+        <a href="#alternance">Alternance</a>
+        <a href="#realisation">Réalisations</a>
+        <a href="#About">Experience</a>
+        <a href="#Contact">Contact</a>
+        <a class="cv" href="./Resources/CV_BALLESTER_Tom.pdf" target="_blank">
+          <img src="./Img/pdf.png" alt="CV_PDF" />
+          <p>Téléchargez mon CV</p>
+        </a>
+      </nav>
+    </header>
+    <div class="fond_pop-up" id="fondPopUp"></div>
+    <div id="Accueil" class="page1">
+      <div class="section1" >
+        <img class="profile_picture" src="./Img/pp.png" alt="Moi" />
+        <pres>
+          <p class="bonjour">Bonjour</p>
+          <p class="name">Je m'appelle Tom BALLESTER</p>
+          <p id="alternating-text" class="descript">
+            Étudiant en BUT-2 Réseaux et Télécommunications à l'université Nice Côte d'Azur
+          </p>
+        </pres>
+      </div>
+      <div class="section2">
+        <div></div>
+        <a href="#alternance" id="bounce-link">
+          <p>Mon Alternance en BUT-2</p>
+          <img src="./Img/arrowbottom.png" alt="bottom-arrow" />
+        </a>
+      </div>
+    </div>
+    <div class="separator"></div>
+    <div id="alternance" class="page4">
+      <h1>Mon Alternance en BUT-2</h1>
+      <div class="container">
+        <div class="left">
+          <h2>Pro BTP</h2>
+          <p>
+            Pour ma 2ème année de BUT R&T en parcours cybersécurité, 
+            j'ai choisi de faire de l'alternance car c'est une expérience que j'ai 
+            déjà tentée il y a quelques années chez Instant-System et que j'avais 
+            beaucoup appréciée. Je trouve que l'alternance est une expérience 
+            très enrichissante pour les étudiants qui nous permet d'appliquer 
+            ce que l'on voit en cours dans un cadre professionnel très 
+            différent et permet de monter en compétence beaucoup plus 
+            rapidement qu'en formation traditionnelle.
+          </p>
+        </div>
+        <div class="right">
+          <img src="./Img/pro_btp.avif" alt="ProBTP" />
+        </div>
+      </div>
+    </div>
+    <div class="separator sep1"></div>
+    <div id="realisation" class="page2">
+      <h1>Mes Réalisations</h1>
+      <section>
+        <!--pop up-->
+        <button class="btn_domaine" id="btnRéseaux">
+          <p>Réseaux</p>
+          <back></back>
+        </button>
+        <div id="réseaux" class="window">
+          <div class="content_window">
+            <div class="containerRéseau">
+              <h2>SAE-21</h2>
+              <span class="close">Fermer</span>
+              <div class="left">
+                <p>
+                  Réalisation d'un réseau d'entreprise sur packet tracer
+                  dans le cadre d'un projet a l'universitée.
+                  <br />
+                  Ce projet en autonomie étalé sur 2 mois, avait pour
+                  objectif de construire le réseau d'une entreprise type
+                  PME, en utilisant plusieurs technologie dont un ASA cisco
+                  pour toucher au concept de firewall, une DMZ, un server
+                  DHCP, DNS, différents Vlans, switch de niveau 3 et
+                  protocole de routage dynamique EIGRP.
+                  <br />
+                  Pour terminer cette SAE nous avons due faire une courte
+                  vidéo explicative de notre configuration.
+                </p>
+                <video
+                  class="video"
+                  controls
+                  poster="./Img/miniature.png"
+                  src="./Video/SAE21.mp4"
+                ></video>
+                <a target="_blank" href="./Files/SAE21.pdf"
+                  ><img src="./Img/pdf.png" alt="SAE-21_PDF" />
+                  <p>Téléchargez la consigne</p></a
+                >
+              </div>
+              <div class="right">
+                <img
+                  class="topologie"
+                  src="./Img/topologie.png"
+                  alt="Packet tracert"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="btn_domaine" id="btnWeb">
+          <p>Web</p>
+          <back></back>
+        </button>
+        <div id="web" class="window">
+          <div class="content_window">
+            <div class="container">
+              <span class="close">Fermer</span>
+              <!--Swiper.js-->
+              <div class="slider-buttons">
+                <button class="swiper-button-prev"></button>
+                <button class="swiper-button-next"></button>
+              </div>
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="slider-item swiper-slide">
+                    <div class="component card_ski">
+                      <h2>Ski club Pégomas</h2>
+                      <p>
+                        Maintenance du site web du club U.S. Ski et Montagne
+                        - Pegomas. Le site est réalisé avec Wordpress et je
+                        le gère depuis 2021.
+                      </p>
+                      <div class="container-3d conteneur">
+                        <div class="card card1">
+                          <div class="front">
+                            <img src="./Img/flip.png" />
+                          </div>
+                          <div class="back">
+                            <div class="back-content">
+                              <div class="back-content">
+                                <div class="link-area">
+                                  <a
+                                    class="linksite"
+                                    href="https://skietmontagnepegomas.com"
+                                    target="_blank"
+                                    ><img src="./Img/link.png" />Visiter le
+                                    site</a
+                                  >
+                                </div>
+                                <div class="logo-dev">
+                                  <img src="./Img/wordpress.png" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slider-item swiper-slide">
+                    <div class="component card_r2c">
+                      <h2>R2C</h2>
+                      <p>
+                        Création d'une application web dans le cadre d'un
+                        projet universitaire pour le compte de l'entreprise
+                        Thales Alenia Space. Cette application permet de
+                        recenser et trier les bonnes pratiques lors des
+                        tests d'avionique, pour faciliter leurs
+                        déroulements. Le site est réalisé avec PHP et
+                        utilise une base de donnée MySQL.
+                      </p>
+                      <div class="container-3d conteneur">
+                        <div class="card card5">
+                          <div class="front">
+                            <img src="./Img/flip.png" />
+                          </div>
+                          <div class="back">
+                            <div class="back-content">
+                              <div class="back-content">
+                                <div class="link-area">
+                                  <a
+                                    class="linksite"
+                                    href="https://github.com/ROAD-TO-CANNES/R2C"
+                                    target="_blank"
+                                    ><img src="./Img/git.png" />Voir le
+                                    code</a
+                                  >
+                                </div>
+                                <div class="logo-dev">
+                                  <img src="./Img/php.png" />
+                                  <img src="./Img/js.png" />
+                                  <img src="./Img/mysql.png" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slider-item swiper-slide">
+                    <div class="component card_plongee">
+                      <h2>La plongée</h2>
+                      <p>
+                        Création d'un site vitrine dans le cadre d'un projet
+                        de groupe universitaire qui présente une passion
+                        commune a mon amis et moi, la plongée sous marine.
+                      </p>
+                      <div class="container-3d conteneur">
+                        <div class="card card2">
+                          <div class="front">
+                            <img src="./Img/flip.png" />
+                          </div>
+                          <div class="back">
+                            <div class="back-content">
+                              <div class="link-area">
+                                <a
+                                  class="linksite"
+                                  href="https://plongee.uca-project.com"
+                                  target="_blank"
+                                  ><img src="./Img/link.png" />Visiter le
+                                  site</a
+                                >
+                                <a
+                                  class="linksite"
+                                  href="https://github.com/Tobm18/Projet_site_web_plongee"
+                                  target="_blank"
+                                  ><img src="./Img/git.png" />Voir le
+                                  code</a
+                                >
+                              </div>
+                              <div class="logo-dev">
+                                <img src="./Img/html5.png" />
+                                <img src="./Img/css3.png" />
+                                <img src="./Img/js.png" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slider-item swiper-slide">
+                    <div class="component card_skibourse">
+                      <h2>Bourse aux skis</h2>
+                      <p>
+                        Création d'une application web pour la gestion de la
+                        bourse aux skis de Pégomas. Cette application permet
+                        d'enregistrer les articles à vendre, de traiter les
+                        ventes, de gérer les tickets clients et le retour
+                        des objets invendus. Le site est réalisé avec React,
+                        Node.js et utilise une base de donnée MongoDB.
+                      </p>
+                      <div class="container-3d conteneur">
+                        <div class="card card3">
+                          <div class="front">
+                            <img src="./Img/flip.png" />
+                          </div>
+                          <div class="back">
+                            <div class="back-content">
+                              <div class="back-content">
+                                <div class="link-area">
+                                  <a
+                                    class="linksite"
+                                    href="https://www.pegomas-ski.store"
+                                    target="_blank"
+                                    ><img src="./Img/link.png" />Visiter le
+                                    site</a
+                                  >
+                                </div>
+                                <div class="logo-dev">
+                                  <img src="./Img/react.png" />
+                                  <img src="./Img/mongodb.png" />
+                                  <img src="./Img/node.png" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slider-item swiper-slide">
+                    <div class="component card_portfolio">
+                      <h2>Mon Portfolio</h2>
+                      <p>
+                        Création de mon site personnel dans le cadre d'un
+                        projet universitaire. Ce site est un portfolio il
+                        présente mes compétences, mes créations ainsi que
+                        mon parcours. Le site est réalisé avec HTML, CSS et
+                        JavaScript.
+                      </p>
+                      <div class="container-3d conteneur">
+                        <div class="card card4">
+                          <div class="front">
+                            <img src="./Img/flip.png" />
+                          </div>
+                          <div class="back">
+                            <div class="back-content">
+                              <div class="back-content">
+                                <div class="link-area">
+                                  <a
+                                    class="linksite"
+                                    href="https://tballester.uca-project.com"
+                                    target="_blank"
+                                    ><img src="./Img/link.png" />Visiter le
+                                    site</a
+                                  >
+                                  <a
+                                    class="linksite"
+                                    href="https://github.com/Tobm18/Site-Web-Personel"
+                                    target="_blank"
+                                    ><img src="./Img/git.png" />Voir le
+                                    code</a
+                                  >
+                                </div>
+                                <div class="logo-dev">
+                                  <img src="./Img/html5.png" />
+                                  <img src="./Img/css3.png" />
+                                  <img src="./Img/js.png" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="btn_domaine" id="btnEcriture">
+          <p>Écriture</p>
+          <back></back>
+        </button>
+        <div id="ecriture" class="window">
+          <div class="content_window">
+            <div class="containerLangue">
+              <span class="close">Fermer</span>
+              <div class="containerEcriture">
+                <h2>Guide de survie</h2>
+                <p>
+                  Dans le cadre d'un projet universitaire nous avons été
+                  amené à écrire un "Guide de survie". Ce projet qui se
+                  présente sous la forme d'un livret est écrit avec une
+                  touche d'humour et beaucoup de conseil pour les futur
+                  première année du BUT R&T.
+                </p>
+                <div class="book">
+                  <p>Feuilletez le guide ➜</p>
+                  <input type="checkbox" name="page1" id="page1" />
+                  <input type="checkbox" name="page2" id="page2" />
+                  <input type="checkbox" name="page3" id="page3" />
+                  <input type="checkbox" name="page4" id="page4" />
+                  <input type="checkbox" name="page5" id="page5" />
+                  <div class="pages">
+                    <div class="page1">
+                      <label for="page1"></label>
+                    </div>
+                    <div class="page2">
+                      <label for="page2"></label>
+                    </div>
+                    <div class="page3">
+                      <label for="page3"></label>
+                    </div>
+                    <div class="page4">
+                      <label for="page4"></label>
+                    </div>
+                    <div class="page5">
+                      <label for="page5"></label>
+                    </div>
+                    <a
+                      target="_blank"
+                      href="./Files/Guide_de _survie_R&T.pdf"
+                      ><img src="./Img/pdf.png" alt="Guide_de_survie" />
+                      <p>Téléchargez le livret</p></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div id="About" class="page3">
+      <ul>
+        <li>
+          <div>
+            <time>09/2024 - Aujourd'hui</time>
+            <flex>
+              <img
+                src="./Img/pro_btp.avif"
+                alt="ProBTP"
+              />
+              <p>
+                Apprentis technicien informatique en contrat d'apprentissage
+                chez ProBTP à Cagnes-sur-Mer.
+              </p>
+            </flex>
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>09/2023 - Aujourd'hui</time>
+            <flex>
+              <img src="./Img/logo-iut.png" alt="IUT Nice Côte D'azur" />
+              <p>
+                Etudiant en BUT Réseau et Télécomunications a l'universitée
+                Nice Côte d'Azur à Biot.
+              </p>
+            </flex>
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>10/2022 - 08/2023</time>
+            <flex>
+              <img
+                src="./Img/logo_Instant_system.png"
+                alt="Instant-System"
+              />
+              <p>
+                Apprentis technicien informatique en contrat d'apprentissage
+                chez Instant-System à Biot.
+              </p>
+            </flex>
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>10/2022 - 08/2023</time>
+            <flex>
+              <img src="./Img/logo_2itech.png" alt="2iTech Accademy" />
+              <p>
+                Etudiant en TSSR (technicien superieur systeme et réseaux) à
+                2iTech Accademy a Sophia-Antipolis.
+              </p>
+            </flex>
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>06/2022</time>
+            <flex>
+              <img
+                src="./Img/logo_lycee.png"
+                alt="Lycée Alexis de Tocqueville"
+              />
+              <p>
+                Passage du baccalauréat STI2D au lycée Alexis de Tocqueville
+                a Grasse obtenu avec mention assez bien.
+              </p>
+            </flex>
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>02/2022</time>
+            <flex>
+              <img src="./Img/logo_mlpg.png" alt="Mission Locale" />
+              <p>
+                Stage en tant que développeur web a la Mission Locale du
+                Pays de Grasse pour aider au developpement du site
+              </p>
+            </flex>
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>12/2018</time>
+            <flex>
+              <img src="./Img/logo_CSTB.jpeg" alt="CSTB" />
+              <p>
+                Stage d'observation au CSTB a Sophia-Antipolis au pôle
+                developpement web
+              </p>
+            </flex>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <footer id="Contact">
+      <p class="contact">Me contacter</p>
+      <div class="flex_cont">
+        <div class="linkedin">
+          <a
+            href="https://www.linkedin.com/in/tom-ballester-39077822a"
+            target="_blank"
+          >
+            <img src="./Img/linkedin.png" alt="linkedin" />
+            <h1>LinkedIn</h1>
+            <p>www.linkedin.com/in/tom-ballester-39077822a</p>
+          </a>
+        </div>
+        <div class="mail">
+          <a href="mailto:tomballester1812@gmail.com" target="_blank">
+            <img src="./Img/mail.png" alt="mail" />
+            <h1>Adresse mail</h1>
+            <p>tomballester1812@gmail.com</p>
+          </a>
+        </div>
+        <div class="telephone">
+          <a href="tel:+33783995807">
+            <img src="./Img/telephone.png" alt="téléphone" />
+            <h1>Portable</h1>
+            <p>+33 7 83 99 58 07</p>
+          </a>
+        </div>
+      </div>
+      <p class="copyright">© 2024 By Tom BALLESTER</p>
+    </footer>
+    <a href="#Top">
+      <img src="./Img/fleche.png" class="bouton-top" alt="Retours en haut" />
+    </a>
   </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="./Js/scroll.js"></script>
+  <script src="./Js/phoneMenu.js"></script>
+  <script src="./Js/card.js"></script>
+  <script src="./Js/timeline.js"></script>
+  <script src="./Js/pop-up.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+  <script src="./Js/swiper.js"></script>
+  <script src="./Js/alternativeText.js"></script>
+  <script src="./Js/bounce.js"></script>
 </html>

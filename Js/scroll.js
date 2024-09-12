@@ -20,7 +20,7 @@ document
       ease: "power4.inOut",
     });
   });
-
+/*
 document
   .querySelector('.menu-incolumn a[href="#Accueil"]')
   .addEventListener("click", function (e) {
@@ -38,6 +38,32 @@ document
       ease: "power4.inOut",
     });
   });
+*/
+// Alternance
+const alternanceLinks = document.querySelectorAll('a[href="#alternance"]');
+alternanceLinks.forEach((link) => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const target = document.querySelector("#alternance");
+    const offset = target.getBoundingClientRect().top + window.scrollY;
+    const vh = Math.max(
+      document.documentElement.clientHeight || 0,
+      window.innerHeight || 0
+    );
+    const offsetWithVh = offset - 0.1 * vh; // 10vh
+    const duration = 1;
+
+    gsap.to(window, {
+      duration: duration,
+      scrollTo: {
+        y: offsetWithVh,
+        autoKill: false,
+      },
+      ease: "power4.inOut",
+    });
+  });
+});
 
 // Contact
 
@@ -56,7 +82,7 @@ document
       behavior: "smooth",
     });
   });
-
+/*
 document
   .querySelector('.menu-incolumn a[href="#Contact"]')
   .addEventListener("click", function (e) {
@@ -77,7 +103,7 @@ document
       behavior: "smooth",
     });
   });
-
+*/
 // Réalisation
 
 document
@@ -103,7 +129,7 @@ document
       ease: "power4.inOut",
     });
   });
-
+/*
 document
   .querySelector('.menu-incolumn a[href="#realisation"]')
   .addEventListener("click", function (e) {
@@ -128,56 +154,7 @@ document
     });
   });
 
-// Skills
-
-document
-  .querySelector('a[href="#Skills"]')
-  .addEventListener("click", function (e) {
-    e.preventDefault();
-
-    const target = document.querySelector("#Skills");
-    const offset = target.getBoundingClientRect().top + window.scrollY;
-    const vh = Math.max(
-      document.documentElement.clientHeight || 0,
-      window.innerHeight || 0
-    );
-    const offsetWithVh = offset - 0.24 * vh; // 24vh
-    const duration = 1;
-
-    gsap.to(window, {
-      duration: duration,
-      scrollTo: {
-        y: offsetWithVh,
-        autoKill: false,
-      },
-      ease: "power4.inOut",
-    });
-  });
-
-document
-  .querySelector('.menu-incolumn a[href="#Skills"]')
-  .addEventListener("click", function (e) {
-    e.preventDefault();
-
-    const target = document.querySelector("#Skills");
-    const offset = target.getBoundingClientRect().top + window.scrollY;
-    const vh = Math.max(
-      document.documentElement.clientHeight || 0,
-      window.innerHeight || 0
-    );
-    const offsetWithVh = offset - 0.12 * vh; // 12vh
-    const duration = 1;
-
-    gsap.to(window, {
-      duration: duration,
-      scrollTo: {
-        y: offsetWithVh,
-        autoKill: false,
-      },
-      ease: "power4.inOut",
-    });
-  });
-
+*/
 // Timeline
 
 document
@@ -203,7 +180,7 @@ document
       ease: "power4.inOut",
     });
   });
-
+/*
 document
   .querySelector('.menu-incolumn a[href="#About"]')
   .addEventListener("click", function (e) {
@@ -227,7 +204,7 @@ document
       ease: "power4.inOut",
     });
   });
-
+*/
 // Bouton Top
 
 document
@@ -250,9 +227,9 @@ const boutonTop = document.querySelector(".bouton-top");
 
 window.addEventListener("scroll", () => {
   if (window.scrollY === 0) {
-    boutonTop.style.display = "none"; // Cacher la fleche
+    boutonTop.style.display = "none"; 
   } else {
-    boutonTop.style.display = "block"; // Afficher la fleche
+    boutonTop.style.display = "block"; 
   }
 });
 
@@ -262,17 +239,96 @@ const topMenu = document.querySelector(".menu-inline");
 const topMenuPhone = document.querySelector(".banner");
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY === 0) {
-    topMenu.style.background = "rgba(0, 0, 0, 0.25)";
+  if (window.scrollY >= window.innerHeight * 1.99) {
+    topMenu.style.background = "var(--blue1)";
   } else {
-    topMenu.style.background = "rgb(47 82 105)";
+    topMenu.style.background = "var(--grey)";
   }
 });
-
+/*
 window.addEventListener("scroll", () => {
   if (window.scrollY === 0) {
     topMenuPhone.style.background = "rgba(0, 0, 0, 0.25)";
   } else {
     topMenuPhone.style.background = "rgb(47 82 105)";
   }
+});*/
+
+// Scroll accueil
+
+document.addEventListener("DOMContentLoaded", () => {
+  let isScrolling = false;
+  let lastScrollY = window.scrollY; // Variable pour stocker la position de défilement précédente
+  let isNavClick = false; // Variable pour suivre si un lien de navigation a été cliqué
+
+  const preventScroll = (event) => {
+    event.preventDefault();
+  };
+
+  const disableScroll = () => {
+    // Désactiver le scroll manuel tout en conservant la barre de défilement visible
+    window.addEventListener("wheel", preventScroll, { passive: false });
+    window.addEventListener("touchmove", preventScroll, { passive: false });
+  };
+
+  const enableScroll = () => {
+    // Réactiver le scroll manuel
+    window.removeEventListener("wheel", preventScroll, { passive: false });
+    window.removeEventListener("touchmove", preventScroll, { passive: false });
+  };
+
+  // Ajouter un écouteur d'événements pour les clics sur les liens de navigation
+  document.querySelectorAll("a[href^='#']").forEach(link => {
+    link.addEventListener("click", () => {
+      isNavClick = true;
+      setTimeout(() => {
+        isNavClick = false;
+      }, 1000); // Désactiver le drapeau après 1 seconde
+    });
+  });
+
+  window.addEventListener("scroll", () => {
+    if (isNavClick) return; // Ne pas exécuter si un lien de navigation a été cliqué
+
+    const vh = Math.max(
+      document.documentElement.clientHeight || 0,
+      window.innerHeight || 0
+    );
+
+    const currentScrollY = window.scrollY; 
+    const scrollDown = currentScrollY > lastScrollY;
+    lastScrollY = currentScrollY; 
+
+    // Réinitialiser le drapeau si la page est tout en haut
+    if (window.scrollY === 0) {
+      isScrolling = false; 
+      enableScroll(); 
+      return; 
+    }
+
+    if (isScrolling) return; // Ne pas exécuter si l'animation est en cours
+
+    if (currentScrollY < vh && scrollDown) {
+      // Scroll vers le bas quand on est en haut de la page
+      isScrolling = true;
+      disableScroll(); 
+
+      const target = document.querySelector("#alternance");
+      const offset = target.getBoundingClientRect().top + window.scrollY;
+      const offsetWithVh = offset - 0.1 * vh; // 10vh
+      const duration = 1;
+
+      gsap.to(window, {
+        duration: duration,
+        scrollTo: {
+          y: offsetWithVh,
+          autoKill: false,
+        },
+        ease: "power4.inOut",
+        onComplete: () => {
+          enableScroll();
+        },
+      });
+    }
+  });
 });

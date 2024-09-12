@@ -1,0 +1,120 @@
+
+.menu-inline a {
+  font-size: 22px;
+  color: #ffff;
+  display: inline-block;
+  font-family: "Saira Semi Condensed", sans-serif;
+  text-decoration: none;
+  position: relative;
+  padding-left: 1px;
+  padding-right: 1px;
+  margin-left: 3%;
+  margin-right: 3%;
+  transition: 0.5s;
+}
+
+.menu-inline a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: 0.5s;
+}
+
+.menu-inline a:hover::before {
+  transform: scaleX(1);
+  background-color: rgb(140, 140, 140);
+}
+
+.menu-inline a:hover {
+  color: rgb(140, 140, 140);
+}
+
+.menu-inline {
+  background-color: var(--grey);
+  display: flex;
+  justify-content: center;
+  height: 10vh;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 2;
+  transition: 1.2s;
+  box-shadow: 0px 1px 10px 0px black;
+}
+
+.cv {
+  margin: 0 !important;
+  position: absolute !important;
+  right: 1% !important;
+  width: 9% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  font-size: small !important;
+}
+
+.cv img {
+  width: 10% !important;
+  height: 10% !important;
+  margin-right: 5px !important;
+  transition: 0.5s !important;
+}
+
+.cv:hover {
+  color: rgb(140, 140, 140);
+}
+
+.cv:hover::before {
+  transform: scaleX(0) !important;
+}
+
+.cv:hover img {
+  filter: invert(45%);
+}
+
+.cvPhone {
+  margin-left: 18vw !important;
+  position: absolute !important;
+  bottom: 5% !important;
+  width: 55% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start;
+  font-size: small !important;
+}
+
+.cvPhone img {
+  width: 10% !important;
+  height: 10% !important;
+  margin-right: 5px !important;
+  transition: 0.5s !important;
+}
+
+.cvPhone:active {
+  color: rgb(140, 140, 140);
+}
+
+.cvPhone:active img {
+  filter: invert(45%);
+}
+
+.menu-incolumn {
+  display: none;
+}
+
+.vertical-line {
+  border-left: 2px solid #000;
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.banner {
+  display: none;
+}

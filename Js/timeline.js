@@ -2,7 +2,7 @@
   "use strict";
 
   // define variables
-  var items = document.querySelectorAll(".timeline li");
+  var items = document.querySelectorAll(".page3 li");
 
   function isElementInViewport(el) {
     var rect = el.getBoundingClientRect();

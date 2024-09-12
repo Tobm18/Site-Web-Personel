@@ -1,0 +1,144 @@
+footer {
+  bottom: 0;
+  width: 100%;
+  background-color: var(--grey);
+  padding-top: 4%;
+  margin-bottom: -100px;
+}
+
+.contact {
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 200%;
+  text-decoration: underline overline;
+  text-underline-offset: 10px;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+footer a img {
+  width: 80px;
+}
+
+.flex_cont {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 4%;
+}
+
+.mail,
+.linkedin,
+.telephone {
+  text-align: center;
+  color: white;
+  width: 20%;
+  transition: 1.5s;
+}
+
+.mail:hover,
+.linkedin:hover,
+.telephone:hover {
+  transform: scale(1.2);
+}
+
+.linkedin p,
+.telephone p {
+  padding-top: 4px;
+  font-size: 120%;
+  font-family: monospace;
+}
+
+.mail p {
+  padding-top: 6px;
+  font-size: 120%;
+  font-family: monospace;
+}
+
+.mail h1,
+.linkedin h1,
+.telephone h1 {
+  font-size: 150%;
+  font-family: sans-serif;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-decoration: none;
+}
+
+.telephone::before,
+.linkedin::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: 0.7s;
+}
+
+.telephone:hover::before,
+.linkedin:hover::before {
+  transform: scaleX(1);
+}
+
+.mail h1 {
+  padding-top: 15px;
+}
+
+.mail::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 50%;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: 0.7s;
+}
+
+.mail:hover::before {
+  transform: scaleX(1);
+}
+
+.mail::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -4px;
+  width: 50%;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: 0.7s;
+}
+
+.mail:hover::after {
+  transform: scaleX(1);
+}
+
+.linkedin a,
+.telephone a,
+.mail a {
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+
+iframe {
+  border-radius: 15px;
+  border-width: 0;
+}
+
+.copyright {
+  color: white;
+  text-align: center;
+  padding-bottom: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 75%;
+}
