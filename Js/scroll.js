@@ -20,7 +20,7 @@ document
       ease: "power4.inOut",
     });
   });
-/*
+
 document
   .querySelector('.menu-incolumn a[href="#Accueil"]')
   .addEventListener("click", function (e) {
@@ -38,7 +38,7 @@ document
       ease: "power4.inOut",
     });
   });
-*/
+
 // Alternance
 const alternanceLinks = document.querySelectorAll('a[href="#alternance"]');
 alternanceLinks.forEach((link) => {
@@ -82,7 +82,7 @@ document
       behavior: "smooth",
     });
   });
-/*
+
 document
   .querySelector('.menu-incolumn a[href="#Contact"]')
   .addEventListener("click", function (e) {
@@ -103,7 +103,7 @@ document
       behavior: "smooth",
     });
   });
-*/
+
 // Réalisation
 
 document
@@ -129,7 +129,7 @@ document
       ease: "power4.inOut",
     });
   });
-/*
+
 document
   .querySelector('.menu-incolumn a[href="#realisation"]')
   .addEventListener("click", function (e) {
@@ -154,7 +154,7 @@ document
     });
   });
 
-*/
+
 // Timeline
 
 document
@@ -180,7 +180,7 @@ document
       ease: "power4.inOut",
     });
   });
-/*
+
 document
   .querySelector('.menu-incolumn a[href="#About"]')
   .addEventListener("click", function (e) {
@@ -204,7 +204,7 @@ document
       ease: "power4.inOut",
     });
   });
-*/
+
 // Bouton Top
 
 document
@@ -237,6 +237,7 @@ window.addEventListener("scroll", () => {
 
 const topMenu = document.querySelector(".menu-inline");
 const topMenuPhone = document.querySelector(".banner");
+const navPhone = document.querySelector("#sideNav");
 
 window.addEventListener("scroll", () => {
   if (window.scrollY >= window.innerHeight * 1.99) {
@@ -245,14 +246,16 @@ window.addEventListener("scroll", () => {
     topMenu.style.background = "var(--grey)";
   }
 });
-/*
+
 window.addEventListener("scroll", () => {
-  if (window.scrollY === 0) {
-    topMenuPhone.style.background = "rgba(0, 0, 0, 0.25)";
+  if (window.scrollY >= window.innerHeight * 1.99) {
+    topMenuPhone.style.background = "var(--blue1)";
+    navPhone.style.background = "rgb(55 84 108 / 85%)";
   } else {
-    topMenuPhone.style.background = "rgb(47 82 105)";
+    topMenuPhone.style.background = "var(--grey)";
+    navPhone.style.background = "rgb(18 18 18 / 80%)";
   }
-});*/
+});
 
 // Scroll accueil
 
