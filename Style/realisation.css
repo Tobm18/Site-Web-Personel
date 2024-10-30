@@ -822,3 +822,56 @@ input[type="checkbox"] {
   transition: 0.5s;
   color: rgb(0, 0, 0);
 }
+
+@media (max-width: 825px) {
+  .containerRéseau {
+    overflow-y: auto;
+    margin-top: 15vh;
+    height: 72vh;
+  }
+
+  .containerRéseau h2 {
+    top: 5%;
+  }
+  
+  .containerRéseau h2::after {
+    content: "";
+    display: block;
+    width: 80%;
+    height: 2px;
+    background-color: black;
+    margin: 5% auto 0 auto;
+  }
+
+  .containerRéseau a {
+    width: 65%;
+    margin: 6% auto;
+    display: block;
+  }
+
+  .content_window {
+    display: block;
+  }
+
+  .left,
+  .right {
+    width: 85%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .topologie {
+    position: static;
+    width: -webkit-fill-available;
+  }
+
+  .content_window .close {
+    bottom: 4%;
+    width: 30%;
+    height: 5%;
+    left: 35%;
+    right: 35%;
+    display: flex;
+    justify-content: center;
+  }
+}
