@@ -335,3 +335,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+// Scroll horizontal Web
+document.querySelector('#containerWeb').addEventListener('wheel', (e) => {
+  const container = document.querySelector('#containerWeb');
+  container.scrollLeft += e.deltaY + e.deltaX;
+});
