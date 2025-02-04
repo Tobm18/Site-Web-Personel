@@ -341,3 +341,9 @@ document.querySelector('#containerWeb').addEventListener('wheel', (e) => {
   const container = document.querySelector('#containerWeb');
   container.scrollLeft += e.deltaY + e.deltaX;
 });
+
+// Scroll horizontal Réseaux
+document.querySelector('#containerReseaux').addEventListener('wheel', (e) => {
+  const container = document.querySelector('#containerReseaux');
+  container.scrollLeft += e.deltaY + e.deltaX;
+});
