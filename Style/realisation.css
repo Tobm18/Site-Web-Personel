@@ -293,6 +293,25 @@ back {
   filter: invert(100%);
 }
 
+.link-area-reseaux {
+  width: fit-content;
+  margin-top: 20px;
+}
+
+.link-area-reseaux a img {
+  position: relative;
+  height: 1rem;
+  display: inline;
+  filter: invert(1);
+}
+
+.link-area-reseaux a p {
+  font-size: 1rem;
+  color: black;
+  display: inline;
+  margin-left: 5px;
+}
+
 .right {
   width: 45%;
   margin-right: 2.5%;
@@ -368,7 +387,7 @@ back {
 .component .right {
   width: 50%;
   height: 100%;
-  padding-right: 50px;
+  padding: 5%;
   margin: 0;
   display: flex;
   flex-direction: column;
